@@ -30,6 +30,14 @@
     "@babel/preset-env": "^7.10.1",
     "@babel/register": "^7.10.1",
     "babel-loader": "^8.1.0",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.2.0",
+    "node-sass": "^4.14.1"
   }
 }
