@@ -5,7 +5,7 @@ babel = require("gulp-babel"),
 sourcemaps = require("gulp-sourcemaps"),
 concat = require("gulp-concat"),
 sass = require("gulp-sass"),
-minifyCSS = require('gulp-minify-css');
+cleanCSS = require('gulp-clean-css');
 
 sass.compiler = require("node-sass");
 
