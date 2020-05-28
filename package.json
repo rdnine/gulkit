@@ -1,0 +1,20 @@
+{
+  "name": "gulkit",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdnine/gulkit.git"
+  },
+  "keywords": ["javascript", "web", "kit", "pack", "gulp", "babel", "ES2015"],
+  "author": "Rafael Duarte @rdnine.dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rdnine/gulkit/issues"
+  },
+  "homepage": "https://github.com/rdnine/gulkit#readme"
+}
