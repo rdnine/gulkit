@@ -36,8 +36,20 @@ function css() {
     .pipe(dest("dist/assets/css"));
 }
 
+/* Watch for changes in folders */
+function watchIt() {
+  watch(
+    [htmlPath, cssPath, jsPath],
+    { interval: 2500 },
+    parallel(html, css, js)
+  );
+}
+
 /* Single Task Execution */
 exports.html = html;
 exports.imgs = imgs;
 exports.js = js;
 exports.sass = css;
+
+/* Starter Task  w/ Watch */
+exports.default = series(parallel(html, imgs, js, css), watchIt);
