@@ -29,12 +29,30 @@ function js() {
   return src(jsPath).pipe(babel()).pipe(dest("dist/assets/js"));
 }
 
+function jsBundle() {
+  return src(jsPath)
+    .pipe(sourcemaps.init())
+    .pipe(babel())
+    .pipe(concat("all.js"))
+    .pipe(sourcemaps.write("."))
+    .pipe(dest("dist/assets/js"));
+}
+
 /* SASS to CSS */
 function css() {
   return src(cssPath)
     .pipe(sass().on("error", sass.logError))
     .pipe(dest("dist/assets/css"));
 }
+
+function cssBundle() {
+  return src(cssPath)
+    .pipe(sass().on("error", sass.logError))
+    .pipe(concat("all.css"))
+    .pipe(cleanCSS())
+    .pipe(dest("dist/assets/css"));
+}
+
 
 /* Watch for changes in folders */
 function watchIt() {
@@ -50,6 +68,15 @@ exports.html = html;
 exports.imgs = imgs;
 exports.js = js;
 exports.sass = css;
+
+exports.jsBundle = jsBundle;
+exports.cssBundle = cssBundle;
+
+/* Development Task */
+exports.dev = parallel(clean, html, imgs, js, css);
+
+/* Production Task */
+exports.prod = parallel(clean, html, imgs, jsBundle, cssBundle);
 
 /* Starter Task  w/ Watch */
 exports.default = series(parallel(html, imgs, js, css), watchIt);
