@@ -1,8 +1,8 @@
 {
   "name": "gulkit",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "JS Web Kit for fast development w/ Gulp and Babel",
+  "main": "src/assets/js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,11 +10,22 @@
     "type": "git",
     "url": "git+https://github.com/rdnine/gulkit.git"
   },
-  "keywords": ["javascript", "web", "kit", "pack", "gulp", "babel", "ES2015"],
+  "keywords": [
+    "javascript",
+    "web",
+    "kit",
+    "pack",
+    "gulp",
+    "babel",
+    "ES2015"
+  ],
   "author": "Rafael Duarte @rdnine.dev",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rdnine/gulkit/issues"
   },
-  "homepage": "https://github.com/rdnine/gulkit#readme"
+  "homepage": "https://github.com/rdnine/gulkit#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
