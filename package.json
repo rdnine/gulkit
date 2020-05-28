@@ -26,6 +26,10 @@
   },
   "homepage": "https://github.com/rdnine/gulkit#readme",
   "devDependencies": {
+    "@babel/core": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
+    "@babel/register": "^7.10.1",
+    "babel-loader": "^8.1.0",
     "gulp": "^4.0.2"
   }
 }
