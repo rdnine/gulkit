@@ -74,6 +74,7 @@ exports.html = html;
 exports.imgs = imgs;
 exports.js = js;
 exports.sass = css;
+exports.clean = clean;
 
 exports.jsBundle = jsBundle;
 exports.cssBundle = cssBundle;
